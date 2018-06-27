@@ -12,5 +12,8 @@ function readyNow(){
         for (let i = 0; i < response.length; i++) {
             $('#quotesList').append(`<li>${response[i].text}</li><li>${response[i].author}</li>`);
         }
+    }).fail(function(errorResponse){
+        console.log(errorResponse);
+        alert('Request failed, error: ' + errorResponse.status)
     })
 }
