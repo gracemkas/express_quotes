@@ -10,7 +10,7 @@ function readyNow(){
         console.log(response);
         
         for (let i = 0; i < response.length; i++) {
-            $('#quotesList').append(`<li class="blockquote">${response[i].text}</li><footer class="blockquote-footer">${response[i].author}</footer>`);
+            $('#quotesList').append(`<p class="blockquote">${response[i].text}</p><footer class="blockquote-footer">${response[i].author}</footer>`);
         }
     }).fail(function(errorResponse){
         console.log(errorResponse);
