@@ -11,13 +11,13 @@ app.listen(PORT, function() {
 
 //create quote array
 let quotes = [{
-    text: 'Whatever you do, do it well',
+    text: 'Whatever you do, do it well.',
     author: 'Walt Disney'
 },{
-    text: 'What we think, we become',
+    text: 'What we think, we become.',
     author: 'Buddha'
 },{
-    text: 'Heroes never die',
+    text: 'Heroes never die.',
     author: 'Mercy'
 }];
 
