@@ -35,3 +35,20 @@ app.post('/quotes', function(req, res){
     console.log(quotes);
     res.sendStatus(201);
 })
+
+//random array
+let random = [{
+    text: 'Whatever you do, do it well.',
+    author: 'Walt Disney'
+},{
+    text: 'What we think, we become.',
+    author: 'Buddha'
+},{
+    text: 'Heroes never die.',
+    author: 'Mercy'
+}];
+
+//random path
+app.get('/random', function(req, res){
+    res.send(random);
+});
