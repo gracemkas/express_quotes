@@ -1,7 +1,10 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+app.use(bodyParser.urlencoded({extended : true}));
 
 app.use(express.static('server/public'));
 
@@ -25,3 +28,10 @@ let quotes = [{
 app.get('/quotes', function(req, res){
     res.send(quotes);
 });
+
+app.post('/quotes', function(req, res){
+    console.log('here is req.body', req.body);
+    quotes.push(req.body);
+    console.log(quotes);
+    res.sendStatus(201);
+})
